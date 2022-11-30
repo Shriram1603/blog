@@ -1,4 +1,3 @@
-
 import TopBar from "./Components/topbar/TopBar"
 import Login from "./pages/Login/Login";
 import Settings from "./pages/settings/Settings";
@@ -12,32 +11,30 @@ function App() {
   const currentUser = false;
   return (
     <Router>
-      <TopBar/>
+      <TopBar />
       <Switch>
         <Route exact path="/">
-        <Home/>
+          <Home />
         </Route>
         <Route path="/posts">
-        <Home/>
+          <Home />
         </Route>
         <Route path="/register">
-          {/* {currentUser ? <Home/> : <Register/>} */}
+          {currentUser ? <Home /> : <Register />}
         </Route>
-        <Route path="/login">{currentUser ? <Home/> : <Login/>}</Route>
+        <Route path="/login">{currentUser ? <Home /> : <Login />}</Route>
         <Route path="/post/:id">
-        <Single/>
+          <Single />
         </Route>
-        <Route path="/write" component={Login}></Route>
-          {/* {currentUser ? <Write/> : <Login/>}</Route> */}
+        <Route path="/write">
+          {currentUser ? <Write /> : <Login />}</Route>
         <Route path="/settings">
-          {currentUser ? <Settings/> : <Login/>}
+          {currentUser ? <Settings /> : <Login />}
         </Route>
       </Switch>
-    </Router>
+    </Router >
   );
 }
 
 
 export default App;
-
-    
