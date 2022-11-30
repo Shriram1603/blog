@@ -5,10 +5,10 @@ import Write from "./pages/write/Write";
 import Single from "./pages/single/Single";
 import Home from "./pages/home/Home";
 import Register from "./pages/Register/Register";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 // import { Button,Col,Row,Card,Container } from 'react-bootstrap';
 function App() {
-  const currentUser = false;
+  const currentUser = true;
   return (
     <Router>
       <TopBar />
