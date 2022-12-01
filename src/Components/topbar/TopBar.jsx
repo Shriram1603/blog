@@ -1,5 +1,6 @@
 import { Link, Router } from "react-router-dom"
 import "./topbar.css"
+import logo from "./images/logo2.png"
 // import { Button,Col,Row,Card,Container } from 'react-bootstrap';
 
 export default function topBar() {
@@ -7,10 +8,13 @@ export default function topBar() {
   return (
  <div className="top">
       <div className="topLeft">
-        <i className="topIcon fab fa-facebook-square"></i>
+        {/* <i className="topIcon fab fa-facebook-square"></i>
         <i className="topIcon fab fa-instagram-square"></i>
         <i className="topIcon fab fa-pinterest-square"></i>
-        <i className="topIcon fab fa-twitter-square"></i>
+        <i className="topIcon fab fa-twitter-square"></i> */}
+        <Link className="link" to="/">
+        <img src={logo} alt="" className="logo"/>
+        </Link>
       </div>
       <div className="topCenter">
         <ul className="topList">
